@@ -15,7 +15,7 @@ const benefits = [
     icon: Leaf,
     title: "Impact Environnemental",
     description:
-      "Éliminez complètement les bouteilles plastiques. Une seule unité permet d'économiser plus de 3'000 bouteilles par an.",
+      "Éliminez complètement les bouteilles. Une seule unité permet d'économiser plus de 3'000 bouteilles par an.",
     stat: "3'000+",
     statLabel: "Bouteilles Économisées/An",
     color: "text-success",
