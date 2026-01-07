@@ -5,18 +5,14 @@ import { ProductsPreview } from "@/components/home/ProductsPreview";
 import { SavingsCalculator } from "@/components/home/SavingsCalculator";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { CTASection } from "@/components/home/CTASection";
-
 const Index = () => {
-  return (
-    <Layout>
+  return <Layout>
       <HeroSection />
       <BenefitsSection />
       <ProductsPreview />
       <SavingsCalculator />
-      <TestimonialsSection />
+      
       <CTASection />
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Index;
