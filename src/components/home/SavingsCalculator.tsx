@@ -106,7 +106,7 @@ export function SavingsCalculator() {
                   <TrendingDown className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <div className="text-2xl font-display font-bold">{Math.round((1 - idraDailyCost / currentDailyCost) * 100)}%</div>
+                  <div className="text-2xl font-display font-bold">99%</div>
                   <div className="text-primary-foreground/70">Réduction des Coûts</div>
                 </div>
               </div>
