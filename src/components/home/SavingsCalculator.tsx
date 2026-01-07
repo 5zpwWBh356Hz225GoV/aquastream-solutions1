@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Calculator, TrendingDown, Leaf, ArrowRight } from "lucide-react";
 export function SavingsCalculator() {
   const [bottlesPerDay, setBottlesPerDay] = useState(50);
-  const [pricePerBottle, setPricePerBottle] = useState(3);
+  const [pricePerBottle, setPricePerBottle] = useState(1.4);
 
   // Calculations (assuming 0.5L bottles)
   const litersPerDay = bottlesPerDay * 0.5;
@@ -57,10 +57,10 @@ export function SavingsCalculator() {
                   <span className="text-sm font-medium text-foreground">Prix actuel par bouteille</span>
                   <span className="text-sm font-bold text-primary">{pricePerBottle.toFixed(2)} CHF</span>
                 </label>
-                <input type="range" min="1" max="8" step="0.5" value={pricePerBottle} onChange={e => setPricePerBottle(Number(e.target.value))} className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary [&::-webkit-slider-thumb]:cursor-pointer" />
+                <input type="range" min="1" max="2" step="0.2" value={pricePerBottle} onChange={e => setPricePerBottle(Number(e.target.value))} className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary [&::-webkit-slider-thumb]:cursor-pointer" />
                 <div className="flex justify-between text-xs text-muted-foreground mt-1">
                   <span>1 CHF</span>
-                  <span>8 CHF</span>
+                  <span>2 CHF</span>
                 </div>
               </div>
             </div>
