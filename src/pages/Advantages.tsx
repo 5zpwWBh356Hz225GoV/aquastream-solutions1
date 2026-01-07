@@ -18,7 +18,7 @@ const advantages = [
         label: "Coût par litre",
       },
       {
-        value: "98%",
+        value: "99%",
         label: "Économies moyennes",
       },
       {
