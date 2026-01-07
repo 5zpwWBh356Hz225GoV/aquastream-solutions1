@@ -7,7 +7,7 @@ import Index from "./pages/Index";
 import Products from "./pages/Products";
 import Advantages from "./pages/Advantages";
 import Technology from "./pages/Technology";
-import Testimonials from "./pages/Testimonials";
+
 import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
 import BlogArticleFiltration from "./pages/BlogArticleFiltration";
@@ -29,7 +29,7 @@ const App = () => (
           <Route path="/products/:category" element={<Products />} />
           <Route path="/advantages" element={<Advantages />} />
           <Route path="/technology" element={<Technology />} />
-          <Route path="/testimonials" element={<Testimonials />} />
+          
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/couts-caches-eau-bouteille-restaurants" element={<BlogArticle />} />
           <Route path="/blog/science-eau-parfaite-filtration" element={<BlogArticleFiltration />} />
