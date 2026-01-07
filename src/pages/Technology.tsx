@@ -84,7 +84,7 @@ const Technology = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-20 pb-16 bg-gradient-to-b from-muted to-background">
+      <section className="pt-16 pb-12 bg-gradient-to-b from-muted to-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
@@ -102,7 +102,7 @@ const Technology = () => {
       </section>
 
       {/* Filtration Process */}
-      <section className="section-padding">
+      <section className="py-12 lg:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl font-bold text-foreground mb-4">Système de Filtration en 4 Étapes</h2>
@@ -144,7 +144,7 @@ const Technology = () => {
       {/* Smart Features */}
 
       {/* Certifications */}
-      <section className="section-padding">
+      <section className="py-12 lg:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-2 rounded-full bg-success/10 text-success text-sm font-semibold mb-4">
@@ -175,7 +175,7 @@ const Technology = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-gradient-to-br from-primary via-primary/95 to-secondary">
+      <section className="py-12 lg:py-16 bg-gradient-to-br from-primary via-primary/95 to-secondary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">
             Découvrez la Différence Technologique
