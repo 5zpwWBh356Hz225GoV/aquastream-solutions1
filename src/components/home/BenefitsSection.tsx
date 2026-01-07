@@ -6,7 +6,7 @@ const benefits = [
     title: "Économies Significatives",
     description:
       "Seulement 1 centime par litre contre +1 CHF pour l'eau en bouteille. Économisez jusqu'à 15'000 CHF par an pour un restaurant moyen.",
-    stat: "98%",
+    stat: "99%",
     statLabel: "Réduction des Coûts",
     color: "text-primary",
     bgColor: "bg-primary/10",
