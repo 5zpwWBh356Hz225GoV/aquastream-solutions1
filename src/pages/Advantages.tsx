@@ -14,7 +14,7 @@ const advantages = [
       "Transformez vos dépenses d'eau d'un poste de coût majeur à une ligne négligeable. À seulement 1 centime par litre, Idra offre une valeur exceptionnelle.",
     stats: [
       {
-        value: "1 centimes",
+        value: "1 centime",
         label: "Coût par litre",
       },
       {
