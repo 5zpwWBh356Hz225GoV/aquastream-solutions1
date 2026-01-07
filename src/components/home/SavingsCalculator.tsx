@@ -116,7 +116,7 @@ export function SavingsCalculator() {
                 </div>
                 <div>
                   <div className="text-2xl font-display font-bold">{bottlesSaved.toLocaleString()}</div>
-                  <div className="text-primary-foreground/70">Bouteilles Économisées/An</div>
+                  <div className="text-primary-foreground/70">Francs économisés/an</div>
                 </div>
               </div>
             </div>
