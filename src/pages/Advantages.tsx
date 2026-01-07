@@ -7,7 +7,7 @@ const advantages = [
     id: "savings",
     icon: TrendingDown,
     title: "Économies Significatives",
-    subtitle: "Réduisez vos coûts d'eau jusqu'à 98%",
+    subtitle: "Réduisez vos coûts d'eau jusqu'à 99%",
     color: "text-primary",
     bgColor: "bg-primary/10",
     description:
