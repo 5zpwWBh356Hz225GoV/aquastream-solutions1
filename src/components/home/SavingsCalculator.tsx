@@ -3,19 +3,17 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calculator, TrendingDown, Leaf, ArrowRight } from "lucide-react";
 export function SavingsCalculator() {
-  const [coversPerDay, setCoversPerDay] = useState(100);
-  const [waterPrice, setWaterPrice] = useState(0.5);
-  const [glassesPerCover, setGlassesPerCover] = useState(2);
+  const [bottlesPerDay, setBottlesPerDay] = useState(50);
+  const [pricePerBottle, setPricePerBottle] = useState(3);
 
-  // Calculations
-  const litersPerDay = coversPerDay * glassesPerCover * 0.25; // 250ml per glass
-  const currentDailyCost = litersPerDay * waterPrice;
-  const idraDailyCost = litersPerDay * 0.01; // 1 cent per liter
+  // Calculations (assuming 0.5L bottles)
+  const litersPerDay = bottlesPerDay * 0.5;
+  const currentDailyCost = bottlesPerDay * pricePerBottle;
+  const idraDailyCost = litersPerDay * 0.01; // 1 centime per liter
   const dailySavings = currentDailyCost - idraDailyCost;
   const monthlySavings = dailySavings * 30;
   const yearlySavings = dailySavings * 365;
-  const bottlesSaved = Math.round(litersPerDay * 365 / 0.5); // 500ml bottles
-  const co2Saved = Math.round(bottlesSaved * 0.082); // kg CO2 per bottle
+  const bottlesSaved = bottlesPerDay * 365;
 
   return <section className="section-padding bg-gradient-to-br from-primary via-primary/95 to-secondary relative overflow-hidden">
       {/* Background decoration */}
@@ -40,42 +38,29 @@ export function SavingsCalculator() {
 
             {/* Inputs */}
             <div className="space-y-6">
-              {/* Covers per day */}
+              {/* Bottles sold per day */}
               <div>
                 <label className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-foreground">Couverts par jour</span>
-                  <span className="text-sm font-bold text-primary">{coversPerDay}</span>
+                  <span className="text-sm font-medium text-foreground">Bouteilles vendues par jour</span>
+                  <span className="text-sm font-bold text-primary">{bottlesPerDay}</span>
                 </label>
-                <input type="range" min="20" max="500" step="10" value={coversPerDay} onChange={e => setCoversPerDay(Number(e.target.value))} className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary [&::-webkit-slider-thumb]:cursor-pointer" />
+                <input type="range" min="10" max="200" step="5" value={bottlesPerDay} onChange={e => setBottlesPerDay(Number(e.target.value))} className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary [&::-webkit-slider-thumb]:cursor-pointer" />
                 <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                  <span>20</span>
-                  <span>500</span>
+                  <span>10</span>
+                  <span>200</span>
                 </div>
               </div>
 
-              {/* Glasses per cover */}
+              {/* Current price per bottle */}
               <div>
                 <label className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-foreground">Verres d'eau par couvert</span>
-                  <span className="text-sm font-bold text-primary">{glassesPerCover}</span>
+                  <span className="text-sm font-medium text-foreground">Prix actuel par bouteille</span>
+                  <span className="text-sm font-bold text-primary">{pricePerBottle.toFixed(2)} CHF</span>
                 </label>
-                <input type="range" min="1" max="5" step="1" value={glassesPerCover} onChange={e => setGlassesPerCover(Number(e.target.value))} className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary [&::-webkit-slider-thumb]:cursor-pointer" />
+                <input type="range" min="1" max="8" step="0.5" value={pricePerBottle} onChange={e => setPricePerBottle(Number(e.target.value))} className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary [&::-webkit-slider-thumb]:cursor-pointer" />
                 <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                  <span>1</span>
-                  <span>5</span>
-                </div>
-              </div>
-
-              {/* Current bottle price */}
-              <div>
-                <label className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-foreground">Coût actuel par litre (bouteille)</span>
-                  <span className="text-sm font-bold text-primary">{waterPrice.toFixed(2)} CHF</span>
-                </label>
-                <input type="range" min="0.3" max="2" step="0.1" value={waterPrice} onChange={e => setWaterPrice(Number(e.target.value))} className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary [&::-webkit-slider-thumb]:cursor-pointer" />
-                <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                  <span>0,30 CHF</span>
-                  <span>2,00 CHF</span>
+                  <span>1 CHF</span>
+                  <span>8 CHF</span>
                 </div>
               </div>
             </div>
@@ -121,7 +106,7 @@ export function SavingsCalculator() {
                   <TrendingDown className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <div className="text-2xl font-display font-bold">{Math.round((1 - 0.01 / waterPrice) * 100)}%</div>
+                  <div className="text-2xl font-display font-bold">{Math.round((1 - idraDailyCost / currentDailyCost) * 100)}%</div>
                   <div className="text-primary-foreground/70">Réduction des Coûts</div>
                 </div>
               </div>
@@ -130,7 +115,7 @@ export function SavingsCalculator() {
                   <Leaf className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <div className="text-2xl font-display font-bold">3,000</div>
+                  <div className="text-2xl font-display font-bold">{bottlesSaved.toLocaleString()}</div>
                   <div className="text-primary-foreground/70">Bouteilles Économisées/An</div>
                 </div>
               </div>
