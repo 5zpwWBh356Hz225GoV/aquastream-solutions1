@@ -116,10 +116,9 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* What to expect & Stats */}
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* What to expect */}
-              <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-3xl p-8 border border-border">
+            {/* What to expect */}
+            <div className="flex justify-center">
+              <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-3xl p-8 border border-border max-w-md">
                 <h3 className="font-display font-semibold text-xl text-foreground mb-6 text-center">
                   À Quoi S'attendre
                 </h3>
@@ -130,9 +129,6 @@ const Contact = () => {
                     </li>)}
                 </ul>
               </div>
-
-              {/* Quick stats */}
-              
             </div>
           </div>
         </div>
