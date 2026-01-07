@@ -51,7 +51,7 @@ export function HeroSection() {
             >
               Transformez votre restaurant, hôtel ou café avec une eau filtrée et gazeuse premium.{" "}
               <strong className="text-primary-foreground">Seulement 2 centimes par litre,</strong> — économisez des
-              milliers d'euros chaque année tout en ravissant vos clients.
+              milliers de francs chaque année tout en ravissant vos clients.
             </p>
 
             <div
