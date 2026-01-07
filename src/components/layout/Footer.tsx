@@ -21,10 +21,6 @@ const footerLinks = {
       href: "/technology",
     },
     {
-      name: "Témoignages",
-      href: "/testimonials",
-    },
-    {
       name: "Blog",
       href: "/blog",
     },
