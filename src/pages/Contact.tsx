@@ -124,31 +124,15 @@ const Contact = () => {
                   À Quoi S'attendre
                 </h3>
                 <ul className="space-y-4">
-                  {["Réponse sous 24 heures", "Analyse d'économies personnalisée", "Consultation sur site gratuite", "Devis sans engagement", "Options de paiement flexibles"].map(item => (
-                    <li key={item} className="flex items-center gap-3 text-muted-foreground">
+                  {["Réponse sous 24 heures", "Analyse d'économies personnalisée", "Consultation sur site gratuite", "Devis sans engagement", "Options de paiement flexibles"].map(item => <li key={item} className="flex items-center gap-3 text-muted-foreground">
                       <CheckCircle2 className="w-5 h-5 text-success flex-shrink-0" />
                       <span>{item}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
 
               {/* Quick stats */}
-              <div className="bg-card rounded-3xl p-8 border border-border">
-                <h3 className="font-display font-semibold text-xl text-foreground mb-6 text-center">
-                  Pourquoi Nous Contacter ?
-                </h3>
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center p-6 bg-muted rounded-2xl">
-                    <div className="text-3xl font-display font-bold text-primary mb-1">300+</div>
-                    <div className="text-sm text-muted-foreground">Clients Satisfaits</div>
-                  </div>
-                  <div className="text-center p-6 bg-muted rounded-2xl">
-                    <div className="text-3xl font-display font-bold text-primary mb-1">98%</div>
-                    <div className="text-sm text-muted-foreground">Satisfaction</div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
