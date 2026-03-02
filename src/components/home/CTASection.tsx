@@ -27,16 +27,16 @@ export function CTASection() {
               {/* Benefits list */}
               <ul className="space-y-4 mb-8">
                 {[
-                  "Évaluation et consultation sur site gratuites",
-                  "Solution personnalisée selon vos besoins spécifiques",
-                  "Installation professionnelle incluse",
-                  "Support technique et maintenance 24h/24 7j/7",
-                ].map((benefit) => (
-                  <li key={benefit} className="flex items-center gap-3 text-primary-foreground/90">
+                "Évaluation et consultation sur site gratuites",
+                "Solution personnalisée selon vos besoins spécifiques",
+                "Installation professionnelle incluse",
+                "Support technique et maintenance 24h/24 7j/7"].
+                map((benefit) =>
+                <li key={benefit} className="flex items-center gap-3 text-primary-foreground/90">
                     <CheckCircle2 className="w-5 h-5 text-water-medium flex-shrink-0" />
                     {benefit}
                   </li>
-                ))}
+                )}
               </ul>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -58,8 +58,8 @@ export function CTASection() {
               <div className="space-y-6">
                 <a
                   href="tel:+41 3123456789"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors group"
-                >
+                  className="flex items-center gap-4 p-4 rounded-xl bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors group">
+                  
                   <div className="w-12 h-12 rounded-xl bg-primary-foreground/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Phone className="w-6 h-6 text-primary-foreground" />
                   </div>
@@ -71,14 +71,14 @@ export function CTASection() {
 
                 <a
                   href="mailto:contact@idra.fr"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors group"
-                >
+                  className="flex items-center gap-4 p-4 rounded-xl bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors group">
+                  
                   <div className="w-12 h-12 rounded-xl bg-primary-foreground/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Mail className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <div>
                     <div className="text-sm text-primary-foreground/70">Écrivez-nous</div>
-                    <div className="text-lg font-semibold text-primary-foreground">contact@idra.fr</div>
+                    <div className="text-lg font-semibold text-primary-foreground">contact@idrasystems.com</div>
                   </div>
                 </a>
               </div>
@@ -88,6 +88,6 @@ export function CTASection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
