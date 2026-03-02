@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#0C6E8C"/>
+  <g transform="translate(16, 16)" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Droplets icon scaled to fit -->
+    <path d="M-3.5,-5 C-3.5,-5 -7,0 -7,3.5 A3.5,3.5 0 0,0 0,3.5 C0,0 -3.5,-5 -3.5,-5 Z"/>
+    <path d="M5,-2 C5,-2 2.5,1.5 2.5,4 A2.5,2.5 0 0,0 7.5,4 C7.5,1.5 5,-2 5,-2 Z"/>
+  </g>
+</svg>
