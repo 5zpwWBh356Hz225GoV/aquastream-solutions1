@@ -155,10 +155,6 @@ const advantages = [
       "Maintenance régulière maintenant les systèmes au top",
     ],
     comparison: {
-      traditional: {
-        price: "Variable",
-        label: "Qualité",
-      },
       idra: {
         price: "Certifiée",
         label: "Excellence",
