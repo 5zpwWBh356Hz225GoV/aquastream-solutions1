@@ -136,7 +136,7 @@ const advantages = [
       "Notre Micro filtration avancée à 0,01 micron garantit que chaque verre servi est cristallin, parfaitement pur, et sublime le goût de vos boissons et de votre cuisine.",
     stats: [
       {
-        value: "4 Étapes",
+        value: "0,01 µm",
         label: "Filtration",
       },
       {
@@ -150,16 +150,11 @@ const advantages = [
     ],
     benefits: [
       "Ultra-Filtration à 0,01 micron avancée éliminant les impuretés",
-      "Stérilisation UV assurant la sécurité microbiologique",
       "Qualité constante quelle que soit la source d'eau du robinet",
       "Équilibre minéral optimal pour un goût parfait",
       "Maintenance régulière maintenant les systèmes au top",
     ],
     comparison: {
-      traditional: {
-        price: "Variable",
-        label: "Qualité",
-      },
       idra: {
         price: "Certifiée",
         label: "Excellence",
@@ -246,12 +241,14 @@ const Advantages = () => {
                       <div className="border-t border-border pt-8">
                         <h4 className="text-sm font-semibold text-foreground mb-4">Comparaison Rapide</h4>
                         <div className="space-y-4">
-                          <div className="flex items-center justify-between p-4 bg-muted rounded-xl">
-                            <span className="text-muted-foreground">{advantage.comparison.traditional.label}</span>
-                            <span className="font-semibold text-foreground">
-                              {advantage.comparison.traditional.price}
-                            </span>
-                          </div>
+                          {advantage.comparison.traditional && (
+                            <div className="flex items-center justify-between p-4 bg-muted rounded-xl">
+                              <span className="text-muted-foreground">{advantage.comparison.traditional.label}</span>
+                              <span className="font-semibold text-foreground">
+                                {advantage.comparison.traditional.price}
+                              </span>
+                            </div>
+                          )}
                           <div className={`flex items-center justify-between p-4 rounded-xl ${advantage.bgColor}`}>
                             <span className={advantage.color}>{advantage.comparison.idra.label}</span>
                             <span className={`font-bold text-lg ${advantage.color}`}>
