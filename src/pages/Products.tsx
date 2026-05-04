@@ -131,12 +131,8 @@ const Products = () => {
                 })}
               </div>
 
-              {/* Price & CTA */}
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <div>
-                  <span className="text-sm text-muted-foreground">À partir de</span>
-                  <div className="text-3xl font-display font-bold text-primary">{product.price}</div>
-                </div>
+              {/* CTA */}
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
                   <Button variant="cta" size="lg">
                     Demander un Devis

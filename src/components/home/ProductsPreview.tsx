@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, Droplets, Zap, Thermometer, Gauge } from "lucide-react";
 import productImage from "@/assets/product-idra.png";
 
 const blocks = [
@@ -8,7 +8,7 @@ const blocks = [
     title: "Tireuse à eau filtrée",
     features: [
       "Eau plate",
-      "Filtration professionnelle",
+      "Filtration professionnelle (0,01 micron)",
       "Connexion directe au réseau",
       "Idéal pour service en carafes",
     ],
@@ -19,8 +19,16 @@ const blocks = [
       "Eau pétillante à la demande",
       "Gazéification stable et continue",
       "Fonctionnement indépendant",
+      "Injection automatique de CO2",
     ],
   },
+];
+
+const specs = [
+  { icon: Gauge, label: "Capacité", value: "240L/heure" },
+  { icon: Droplets, label: "Dimensions", value: "50 x 25 x 45 cm" },
+  { icon: Zap, label: "Puissance", value: "220V" },
+  { icon: Thermometer, label: "CO2", value: "Cylindre 2kg" },
 ];
 
 export function ProductsPreview() {
@@ -42,29 +50,31 @@ export function ProductsPreview() {
         </div>
 
         {/* Product */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto bg-card rounded-3xl border border-border overflow-hidden shadow-elevated">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
-          <div className="relative h-full min-h-[400px] bg-gradient-to-br from-muted to-background flex items-center justify-center p-8">
-            <span className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold">
-              Solution tout-en-un
-            </span>
-            <img
-              src={productImage}
-              alt="Tireuse Idra"
-              className="w-full max-w-sm rounded-2xl"
-            />
+          <div>
+            <div className="relative bg-gradient-to-br from-muted to-background rounded-3xl p-8 lg:p-12">
+              <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold">
+                Solution tout-en-un
+              </span>
+              <img src={productImage} alt="Tireuse Idra" className="w-full max-w-md mx-auto rounded-2xl" />
+            </div>
           </div>
 
           {/* Content */}
-          <div className="p-8 lg:p-10">
-            <span className="text-secondary text-sm font-medium">Tireuse à eau filtrée & pétillante</span>
-            <h3 className="font-display text-3xl font-bold text-foreground mt-1 mb-6">Idra</h3>
+          <div>
+            <span className="text-secondary font-medium">Tireuse à eau filtrée & pétillante</span>
+            <h3 className="font-display text-3xl lg:text-4xl font-bold text-foreground mt-2 mb-4">Idra</h3>
+            <p className="text-lg text-muted-foreground mb-8">
+              Une source unique d'eau premium, plate ou pétillante, directement connectée à votre réseau.
+            </p>
 
-            <div className="space-y-6 mb-8">
+            {/* Two function blocks */}
+            <div className="grid sm:grid-cols-2 gap-6 mb-8">
               {blocks.map((block) => (
-                <div key={block.title}>
-                  <h4 className="font-display text-lg font-bold text-foreground mb-2">{block.title}</h4>
-                  <ul className="space-y-1.5">
+                <div key={block.title} className="p-5 rounded-2xl border border-border bg-card">
+                  <h4 className="font-display text-lg font-bold text-foreground mb-3">{block.title}</h4>
+                  <ul className="space-y-2">
                     {block.features.map((f) => (
                       <li key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
                         <Check className="w-4 h-4 text-success flex-shrink-0 mt-0.5" />
@@ -76,16 +86,28 @@ export function ProductsPreview() {
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link to="/products">
-                <Button variant="ocean" size="lg" className="w-full sm:w-auto">
-                  Découvrir Idra
+            {/* Specs */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 bg-card rounded-2xl mb-8 border border-border">
+              {specs.map(({ icon: Icon, label, value }) => (
+                <div key={label} className="text-center">
+                  <Icon className="w-5 h-5 text-primary mx-auto mb-2" />
+                  <div className="text-sm font-semibold text-foreground">{value}</div>
+                  <div className="text-xs text-muted-foreground">{label}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/contact">
+                <Button variant="cta" size="lg">
+                  Demander un Devis
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
-              <Link to="/contact">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                  Demander un Devis
+              <Link to="/products">
+                <Button variant="outline" size="lg">
+                  En Savoir Plus
                 </Button>
               </Link>
             </div>
