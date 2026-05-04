@@ -149,7 +149,7 @@ const advantages = [
       },
     ],
     benefits: [
-      "Filtration multi-étapes avancée éliminant les impuretés",
+      "Ultra-Filtration à 0,01 micron avancée éliminant les impuretés",
       "Stérilisation UV assurant la sécurité microbiologique",
       "Qualité constante quelle que soit la source d'eau du robinet",
       "Équilibre minéral optimal pour un goût parfait",
