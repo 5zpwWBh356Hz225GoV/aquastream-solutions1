@@ -136,7 +136,7 @@ const advantages = [
       "Notre Micro filtration avancée à 0,01 micron garantit que chaque verre servi est cristallin, parfaitement pur, et sublime le goût de vos boissons et de votre cuisine.",
     stats: [
       {
-        value: "4 Étapes",
+        value: "0,01 µm",
         label: "Filtration",
       },
       {
@@ -150,7 +150,6 @@ const advantages = [
     ],
     benefits: [
       "Ultra-Filtration à 0,01 micron avancée éliminant les impuretés",
-      "Stérilisation UV assurant la sécurité microbiologique",
       "Qualité constante quelle que soit la source d'eau du robinet",
       "Équilibre minéral optimal pour un goût parfait",
       "Maintenance régulière maintenant les systèmes au top",
