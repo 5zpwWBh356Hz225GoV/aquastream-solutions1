@@ -239,7 +239,7 @@ const Advantages = () => {
 
                       {/* Comparison */}
                       <div className="border-t border-border pt-8">
-                        <h4 className="text-sm font-semibold text-foreground mb-4">Comparaison Rapide</h4>
+                        
                         <div className="space-y-4">
                           {advantage.comparison.traditional && (
                             <div className="flex items-center justify-between p-4 bg-muted rounded-xl">
