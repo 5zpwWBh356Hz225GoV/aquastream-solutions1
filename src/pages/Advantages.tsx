@@ -133,7 +133,7 @@ const advantages = [
     color: "text-accent",
     bgColor: "bg-accent/10",
     description:
-      "Notre filtration avancée en 4 étapes garantit que chaque verre servi est cristallin, parfaitement pur, et sublime le goût de vos boissons et de votre cuisine.",
+      "Notre Micro filtration avancée à 0,01 micron garantit que chaque verre servi est cristallin, parfaitement pur, et sublime le goût de vos boissons et de votre cuisine.",
     stats: [
       {
         value: "4 Étapes",
@@ -149,7 +149,7 @@ const advantages = [
       },
     ],
     benefits: [
-      "Filtration multi-étapes avancée éliminant les impuretés",
+      "Ultra-Filtration à 0,01 micron avancée éliminant les impuretés",
       "Stérilisation UV assurant la sécurité microbiologique",
       "Qualité constante quelle que soit la source d'eau du robinet",
       "Équilibre minéral optimal pour un goût parfait",
