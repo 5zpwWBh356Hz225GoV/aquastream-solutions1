@@ -241,12 +241,14 @@ const Advantages = () => {
                       <div className="border-t border-border pt-8">
                         <h4 className="text-sm font-semibold text-foreground mb-4">Comparaison Rapide</h4>
                         <div className="space-y-4">
-                          <div className="flex items-center justify-between p-4 bg-muted rounded-xl">
-                            <span className="text-muted-foreground">{advantage.comparison.traditional.label}</span>
-                            <span className="font-semibold text-foreground">
-                              {advantage.comparison.traditional.price}
-                            </span>
-                          </div>
+                          {advantage.comparison.traditional && (
+                            <div className="flex items-center justify-between p-4 bg-muted rounded-xl">
+                              <span className="text-muted-foreground">{advantage.comparison.traditional.label}</span>
+                              <span className="font-semibold text-foreground">
+                                {advantage.comparison.traditional.price}
+                              </span>
+                            </div>
+                          )}
                           <div className={`flex items-center justify-between p-4 rounded-xl ${advantage.bgColor}`}>
                             <span className={advantage.color}>{advantage.comparison.idra.label}</span>
                             <span className={`font-bold text-lg ${advantage.color}`}>
