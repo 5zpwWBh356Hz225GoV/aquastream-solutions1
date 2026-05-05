@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Check, Droplets, Zap, Thermometer, Gauge } from "lucide-react";
 import productImage from "@/assets/product-idra.png";
+import situation1 from "@/assets/idra-in-situation.jpg";
+import situation2 from "@/assets/idra-in-situation-2.jpg";
+import situation3 from "@/assets/idra-in-situation-3.jpg";
 
 const product = {
   id: "idra",
@@ -141,6 +144,41 @@ const Products = () => {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* In situation */}
+      <section className="section-padding bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="inline-block px-4 py-2 rounded-full bg-secondary/20 text-secondary text-sm font-semibold mb-4">
+              En situation
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Idra dans votre <span className="text-gradient-ocean">établissement</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Découvrez comment Idra s'intègre élégamment dans les bars, restaurants et hôtels.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { src: situation1, alt: "Idra installée sur un comptoir en marbre" },
+              { src: situation2, alt: "Service d'eau pétillante au bar" },
+              { src: situation3, alt: "Carafes Idra sur table de restaurant" },
+            ].map((img) => (
+              <div key={img.alt} className="overflow-hidden rounded-2xl shadow-soft group">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  width={1920}
+                  height={1080}
+                  className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
