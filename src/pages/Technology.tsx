@@ -15,7 +15,7 @@ const certifications = [
     icon: Gauge,
   },
   {
-    name: "NSF / NSF/ANSI 42 53",
+    name: "NSF",
     description: "Normes pour unités de traitement d'eau potable",
     icon: Droplets,
   },
