@@ -5,17 +5,17 @@ import { ArrowRight, Droplets, ShieldCheck, Gauge, Leaf } from "lucide-react";
 import filtrationInfographic from "@/assets/filtration-infographic.png";
 const certifications = [
   {
-    name: "Certifié HACCP",
-    description: "Répond aux exigences du système de gestion de la sécurité alimentaire",
+    name: "RoHS",
+    description: "Conforme à la restriction des substances dangereuses",
     icon: ShieldCheck,
   },
   {
-    name: "ISO 9001:2015",
+    name: "ISO",
     description: "Système de management de la qualité certifié",
     icon: Gauge,
   },
   {
-    name: "NSF/ANSI 42 & 53",
+    name: "NSF / NSF/ANSI 42 53",
     description: "Normes pour unités de traitement d'eau potable",
     icon: Droplets,
   },
