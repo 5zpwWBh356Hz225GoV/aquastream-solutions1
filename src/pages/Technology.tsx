@@ -36,11 +36,11 @@ const Technology = () => {
               Notre Technologie
             </span>
             <h1 className="font-display text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              Filtration Avancée, <span className="text-gradient-ocean">Résultats Purs</span>
+              Système de Filtration <span className="text-gradient-ocean">Professionnel</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Découvrez l'excellence technique derrière chaque système Idra. Cinq étapes de purification garantissent
-              que chaque goutte répond aux plus hauts standards.
+              Une ultra-filtration à 0,01 micron qui élimine les impuretés tout en préservant les minéraux
+              naturels essentiels au goût et à la santé. Découvrez l'excellence technique derrière chaque système Idra.
             </p>
           </div>
         </div>
@@ -49,16 +49,6 @@ const Technology = () => {
       {/* Filtration Process */}
       <section className="py-12 lg:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl font-bold text-foreground mb-4">
-              Système de Filtration Professionnel
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Une ultra-filtration à 0,01 micron qui élimine les impuretés tout en préservant les minéraux
-              naturels essentiels au goût et à la santé.
-            </p>
-          </div>
-
           <div className="rounded-3xl overflow-hidden border border-border shadow-elevated bg-card">
             <img
               src={filtrationInfographic}
