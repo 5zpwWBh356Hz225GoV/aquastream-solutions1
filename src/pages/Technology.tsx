@@ -1,37 +1,8 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Filter, Droplets, ShieldCheck, Sparkles, Thermometer, Gauge, Wifi, Leaf } from "lucide-react";
-const filtrationStages = [
-  {
-    stage: 1,
-    name: "Charbon Actif",
-    description:
-      "Élimine le chlore, les composés organiques et les goûts et odeurs désagréables pour une eau pure et propre.",
-    icon: Droplets,
-  },
-  {
-    stage: 2,
-    name: "Anti Calcaire",
-    description:
-      "Protège contre les dépôts de calcaire et adoucit l'eau pour préserver vos équipements et améliorer le goût.",
-    icon: Sparkles,
-  },
-  {
-    stage: 3,
-    name: "Ultrafiltration",
-    description:
-      "Membrane haute performance filtrant les bactéries, micro-organismes et particules fines jusqu'à 0,001 micron.",
-    icon: Filter,
-  },
-  {
-    stage: 4,
-    name: "Stérilisation UV",
-    description:
-      "Détruit 99,99% des bactéries et virus par lumière ultraviolette pour une sécurité microbiologique totale.",
-    icon: ShieldCheck,
-  },
-];
+import { ArrowRight, Droplets, ShieldCheck, Gauge, Leaf } from "lucide-react";
+import filtrationInfographic from "@/assets/filtration-infographic.png";
 const certifications = [
   {
     name: "Certifié HACCP",

@@ -36,7 +36,7 @@ const benefits = [
     title: "Qualité Premium",
     description:
       "La filtration multi-étapes garantit une eau cristalline qui sublime le goût de vos boissons et de vos plats.",
-    stat: "4 Étapes",
+    stat: "0,01 micron",
     statLabel: "Système de Filtration",
     color: "text-accent",
     bgColor: "bg-accent/10",
