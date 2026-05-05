@@ -6,14 +6,7 @@ import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "Accueil", href: "/" },
-  {
-    name: "Produits",
-    href: "/products",
-    children: [
-      { name: "Fontaines Eau Gazeuse", href: "/products/sparkling" },
-      { name: "Systèmes Eau Filtrée", href: "/products/filtered" },
-    ],
-  },
+  { name: "Fontaine Idra", href: "/products" },
   {
     name: "Avantages",
     href: "/advantages",
