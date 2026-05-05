@@ -26,7 +26,7 @@ const blocks = [
 
 const specs = [
   { icon: Gauge, label: "Capacité", value: "240L/heure" },
-  { icon: Droplets, label: "Dimensions", value: "50 x 25 x 45 cm" },
+  { icon: Droplets, label: "Dimensions", value: "30 x 40 x 45 cm" },
   { icon: Zap, label: "Puissance", value: "220V" },
   { icon: Thermometer, label: "CO2", value: "Cylindre 2kg" },
 ];

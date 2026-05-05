@@ -36,7 +36,7 @@ const product = {
   ],
   specs: {
     capacity: "240L/heure",
-    dimensions: "50 x 25 x 45 cm",
+    dimensions: "30 x 40 x 45 cm",
     power: "220V",
     co2: "Cylindre 2kg (inclus)",
   },
